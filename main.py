@@ -4,22 +4,20 @@ if numero <= 0:
     print('Número inválido')
 elif numero == 1:
     print('Não primo')
-elif numero == 2 or numero == 3 or numero == 5: 
-    print('Primo')
-else:
-    for i in range(2, numero):
+elif numero == 2:
+    print("Primo")
+elif numero > 2:
+    is_prime = True
+    for i in range (2, int(numero**0.5) + 1):
         if numero % i == 0:
-            print('Não primo')
+            is_prime = False
             break
-        elif numero % 3 == 0:
-            print('Não primo')
-            break
-        elif numero % 5 == 0:
-            print('Não primo')
-            break
-        else: 
-            print('Primo')
-            break
+    if is_prime:
+        print("Primo")
+    else:
+        print("Não primo")
+   
+
             
                     
             
